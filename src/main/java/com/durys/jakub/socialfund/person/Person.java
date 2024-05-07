@@ -18,4 +18,21 @@ public class Person {
     public Long age(LocalDate at) {
         return personalData.age(at);
     }
+
+
+    public boolean isEmployee() {
+        return type == PersonType.Employee;
+    }
+    
+    public boolean isFormerEmployee() {
+        return type == PersonType.FormerEmployee;
+    }
+
+    public boolean isChild() {
+        return type == PersonType.Child;
+    }
+
+    public boolean isPensioner() {
+        return type == PersonType.Pensioner;
+    }
 }
