@@ -1,4 +1,4 @@
-package com.durys.jakub.socialfund.person;
+package com.durys.jakub.socialfund.person.domain;
 
 import java.time.LocalDate;
 
@@ -23,7 +23,7 @@ public class Person {
     public boolean isEmployee() {
         return type == PersonType.Employee;
     }
-    
+
     public boolean isFormerEmployee() {
         return type == PersonType.FormerEmployee;
     }

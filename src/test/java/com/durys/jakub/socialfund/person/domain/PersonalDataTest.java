@@ -1,4 +1,4 @@
-package com.durys.jakub.socialfund.person;
+package com.durys.jakub.socialfund.person.domain;
 
 import com.durys.jakub.socialfund.common.DomainValidationException;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.durys.jakub.socialfund.person;
+package com.durys.jakub.socialfund.person.domain;
 
 enum PersonType {
     Employee,
