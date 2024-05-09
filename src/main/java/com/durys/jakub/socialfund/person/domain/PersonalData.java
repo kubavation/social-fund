@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
-record PersonalData(String firstName, String lastName, LocalDate birthday) {
+record PersonalData(String firstName, String lastName, LocalDate birthdayDate) {
 
     public PersonalData {
 
@@ -19,15 +19,15 @@ record PersonalData(String firstName, String lastName, LocalDate birthday) {
             throw new DomainValidationException("Invalid lastName");
         }
 
-        if (Objects.isNull(birthday) || birthday.isAfter(LocalDate.now())) {
-            throw new DomainValidationException("Invalid birthday date");
+        if (Objects.isNull(birthdayDate) || birthdayDate.isAfter(LocalDate.now())) {
+            throw new DomainValidationException("Invalid birthdayDate date");
         }
 
     }
 
 
     public Long age(LocalDate at) {
-        return ChronoUnit.YEARS.between(birthday, at);
+        return ChronoUnit.YEARS.between(birthdayDate, at);
     }
 
 }

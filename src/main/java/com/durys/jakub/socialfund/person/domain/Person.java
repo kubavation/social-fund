@@ -15,10 +15,13 @@ public class Person {
     }
 
 
+    public PersonId id() {
+        return personId;
+    }
+
     public Long age(LocalDate at) {
         return personalData.age(at);
     }
-
 
     public boolean isEmployee() {
         return type == PersonType.Employee;
