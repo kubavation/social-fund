@@ -15,6 +15,10 @@ public class Person {
     }
 
 
+    public PersonId id() {
+        return personId;
+    }
+
     public Long age(LocalDate at) {
         return personalData.age(at);
     }
