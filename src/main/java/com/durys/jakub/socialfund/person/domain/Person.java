@@ -19,7 +19,6 @@ public class Person {
         return personalData.age(at);
     }
 
-
     public boolean isEmployee() {
         return type == PersonType.Employee;
     }

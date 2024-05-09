@@ -1,6 +1,6 @@
 package com.durys.jakub.socialfund.person.domain;
 
-enum PersonType {
+public enum PersonType {
     Employee,
     Pensioner,
     FormerEmployee,
