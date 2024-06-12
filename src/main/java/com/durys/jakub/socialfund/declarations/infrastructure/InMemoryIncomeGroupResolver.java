@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 public class InMemoryIncomeGroupResolver implements IncomeGroupResolver {
 
     @Override
-    public Integer resolve(Long year, BigDecimal income) {
-        return 2; //todo
+    public Integer resolve(Integer year, BigDecimal income) {
+        return 2;
     }
 }
