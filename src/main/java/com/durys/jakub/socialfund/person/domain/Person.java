@@ -4,6 +4,8 @@ import com.durys.jakub.socialfund.ddd.AggregateRoot;
 import com.durys.jakub.socialfund.ddd.event.DomainEventsPublisher;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.Objects;
 
 public class Person extends AggregateRoot {
 
@@ -31,19 +33,14 @@ public class Person extends AggregateRoot {
         return this.type == type;
     }
 
-    public boolean isEmployee() {
-        return type == PersonType.Employee;
+    public boolean is(Collection<PersonType> types) {
+
+        if (Objects.isNull(types)) {
+            return true;
+        }
+
+        return types.stream()
+                .anyMatch(t -> t == type);
     }
 
-    public boolean isFormerEmployee() {
-        return type == PersonType.FormerEmployee;
-    }
-
-    public boolean isChild() {
-        return type == PersonType.Child;
-    }
-
-    public boolean isPensioner() {
-        return type == PersonType.Pensioner;
-    }
 }
