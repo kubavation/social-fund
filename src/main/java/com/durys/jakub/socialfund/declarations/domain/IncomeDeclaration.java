@@ -25,7 +25,7 @@ public class IncomeDeclaration extends AggregateRoot {
     private BigDecimal income;
     private State state;
 
-    IncomeDeclaration(DomainEventsPublisher events, IncomeGroupResolver incomeGroupResolver,
+    public IncomeDeclaration(DomainEventsPublisher events, IncomeGroupResolver incomeGroupResolver,
                       DeclarationId id, PersonId personId, LocalDateTime submittedAt, Integer year, BigDecimal income) {
         super(events);
         this.id = id;
