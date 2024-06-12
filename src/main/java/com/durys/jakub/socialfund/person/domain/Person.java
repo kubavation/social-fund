@@ -27,6 +27,10 @@ public class Person extends AggregateRoot {
         return personalData.age(at);
     }
 
+    public boolean is(PersonType type) {
+        return this.type == type;
+    }
+
     public boolean isEmployee() {
         return type == PersonType.Employee;
     }
